@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC3998F617C497CA00AD3189 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3998F517C497CA00AD3189 /* UIKit.framework */; };
+		DC3998F717C497CA00AD3189 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDF154917BB09EF0029280A /* Foundation.framework */; };
+		DC3998F917C497CA00AD3189 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3998F817C497CA00AD3189 /* CoreGraphics.framework */; };
+		DC3998FF17C497CA00AD3189 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC3998FD17C497CA00AD3189 /* InfoPlist.strings */; };
+		DC39990117C497CA00AD3189 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39990017C497CA00AD3189 /* main.m */; };
+		DC39990517C497CA00AD3189 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39990417C497CA00AD3189 /* AppDelegate.m */; };
+		DC39990717C497CA00AD3189 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DC39990617C497CA00AD3189 /* Default.png */; };
+		DC39990917C497CA00AD3189 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC39990817C497CA00AD3189 /* Default@2x.png */; };
+		DC39990B17C497CA00AD3189 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC39990A17C497CA00AD3189 /* Default-568h@2x.png */; };
+		DC39990E17C497CA00AD3189 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC39990C17C497CA00AD3189 /* MainStoryboard.storyboard */; };
+		DC39991117C497CA00AD3189 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39991017C497CA00AD3189 /* ViewController.m */; };
+		DC39991517C497DC00AD3189 /* libSCFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDF154617BB09EF0029280A /* libSCFramework.a */; };
+		DCDF154A17BB09EF0029280A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDF154917BB09EF0029280A /* Foundation.framework */; };
+		DCDF158517BC1C6A0029280A /* SCListDataDisplayerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF157717BB0AF90029280A /* SCListDataDisplayerHandler.m */; };
+		DCDF158617BC1C6F0029280A /* SCDataSourceHandleImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF156F17BB0AF90029280A /* SCDataSourceHandleImpl.m */; };
+		DCDF158717BC1C720029280A /* SCSection.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF157217BB0AF90029280A /* SCSection.m */; };
+		DCDF158817BC1C760029280A /* SCDataSets.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF156C17BB0AF90029280A /* SCDataSets.m */; };
+		DCDF158917BC1C7C0029280A /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF157A17BB0AF90029280A /* SCViewController.m */; };
+		DCDF158A17BC1C850029280A /* SCDataSetPager.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF158317BB16750029280A /* SCDataSetPager.m */; };
+		DCDF158B17BC1C910029280A /* SCViewCreatorHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF157317BB0AF90029280A /* SCViewCreatorHandle.m */; };
+		DCDF159117BC2FF10029280A /* SCTableViewHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF159017BC2FF00029280A /* SCTableViewHandler.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DCDF154417BB09EF0029280A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DC3998EF17C495A600AD3189 /* SCListDataDisplayerHandlerInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCListDataDisplayerHandlerInternal.h; sourceTree = "<group>"; };
+		DC3998F417C497CA00AD3189 /* SCFrameworkSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFrameworkSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC3998F517C497CA00AD3189 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DC3998F817C497CA00AD3189 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DC3998FC17C497CA00AD3189 /* SCFrameworkSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SCFrameworkSample-Info.plist"; sourceTree = "<group>"; };
+		DC3998FE17C497CA00AD3189 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC39990017C497CA00AD3189 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC39990217C497CA00AD3189 /* SCFrameworkSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SCFrameworkSample-Prefix.pch"; sourceTree = "<group>"; };
+		DC39990317C497CA00AD3189 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DC39990417C497CA00AD3189 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DC39990617C497CA00AD3189 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DC39990817C497CA00AD3189 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DC39990A17C497CA00AD3189 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DC39990D17C497CA00AD3189 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DC39990F17C497CA00AD3189 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DC39991017C497CA00AD3189 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DCDF154617BB09EF0029280A /* libSCFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSCFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCDF154917BB09EF0029280A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DCDF154D17BB09EF0029280A /* SCFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SCFramework-Prefix.pch"; sourceTree = "<group>"; };
+		DCDF156A17BB0AF90029280A /* SCDataSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCDataSet.h; sourceTree = SOURCE_ROOT; };
+		DCDF156B17BB0AF90029280A /* SCDataSourceHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCDataSourceHandle.h; sourceTree = SOURCE_ROOT; };
+		DCDF156C17BB0AF90029280A /* SCDataSets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCDataSets.m; sourceTree = SOURCE_ROOT; };
+		DCDF156D17BB0AF90029280A /* SCDataSourceHandleImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCDataSourceHandleImpl.h; sourceTree = SOURCE_ROOT; };
+		DCDF156F17BB0AF90029280A /* SCDataSourceHandleImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCDataSourceHandleImpl.m; sourceTree = SOURCE_ROOT; };
+		DCDF157017BB0AF90029280A /* SCSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCSection.h; sourceTree = SOURCE_ROOT; };
+		DCDF157117BB0AF90029280A /* SCDataSets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCDataSets.h; sourceTree = SOURCE_ROOT; };
+		DCDF157217BB0AF90029280A /* SCSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCSection.m; sourceTree = SOURCE_ROOT; };
+		DCDF157317BB0AF90029280A /* SCViewCreatorHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCViewCreatorHandle.m; sourceTree = SOURCE_ROOT; };
+		DCDF157417BB0AF90029280A /* SCViewCreatorHandleInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCViewCreatorHandleInternal.h; sourceTree = SOURCE_ROOT; };
+		DCDF157517BB0AF90029280A /* SCViewCreatorHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCViewCreatorHandle.h; sourceTree = SOURCE_ROOT; };
+		DCDF157617BB0AF90029280A /* SCListDataDisplayerHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCListDataDisplayerHandler.h; sourceTree = SOURCE_ROOT; };
+		DCDF157717BB0AF90029280A /* SCListDataDisplayerHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCListDataDisplayerHandler.m; sourceTree = SOURCE_ROOT; };
+		DCDF157817BB0AF90029280A /* SCDataModelDisplayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCDataModelDisplayer.h; sourceTree = SOURCE_ROOT; };
+		DCDF157917BB0AF90029280A /* SCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = SOURCE_ROOT; };
+		DCDF157A17BB0AF90029280A /* SCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = SOURCE_ROOT; };
+		DCDF158217BB16750029280A /* SCDataSetPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCDataSetPager.h; sourceTree = "<group>"; };
+		DCDF158317BB16750029280A /* SCDataSetPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCDataSetPager.m; sourceTree = "<group>"; };
+		DCDF158C17BC24310029280A /* SCFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCFramework.h; sourceTree = SOURCE_ROOT; };
+		DCDF158E17BC26E70029280A /* SCSectionInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCSectionInternal.h; sourceTree = "<group>"; };
+		DCDF158F17BC2FF00029280A /* SCTableViewHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewHandler.h; sourceTree = "<group>"; };
+		DCDF159017BC2FF00029280A /* SCTableViewHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewHandler.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC3998F117C497CA00AD3189 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC39991517C497DC00AD3189 /* libSCFramework.a in Frameworks */,
+				DC3998F617C497CA00AD3189 /* UIKit.framework in Frameworks */,
+				DC3998F717C497CA00AD3189 /* Foundation.framework in Frameworks */,
+				DC3998F917C497CA00AD3189 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCDF154317BB09EF0029280A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCDF154A17BB09EF0029280A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC3998FA17C497CA00AD3189 /* SCFrameworkSample */ = {
+			isa = PBXGroup;
+			children = (
+				DC39990317C497CA00AD3189 /* AppDelegate.h */,
+				DC39990417C497CA00AD3189 /* AppDelegate.m */,
+				DC39990C17C497CA00AD3189 /* MainStoryboard.storyboard */,
+				DC39990F17C497CA00AD3189 /* ViewController.h */,
+				DC39991017C497CA00AD3189 /* ViewController.m */,
+				DC3998FB17C497CA00AD3189 /* Supporting Files */,
+			);
+			path = SCFrameworkSample;
+			sourceTree = "<group>";
+		};
+		DC3998FB17C497CA00AD3189 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC3998FC17C497CA00AD3189 /* SCFrameworkSample-Info.plist */,
+				DC3998FD17C497CA00AD3189 /* InfoPlist.strings */,
+				DC39990017C497CA00AD3189 /* main.m */,
+				DC39990217C497CA00AD3189 /* SCFrameworkSample-Prefix.pch */,
+				DC39990617C497CA00AD3189 /* Default.png */,
+				DC39990817C497CA00AD3189 /* Default@2x.png */,
+				DC39990A17C497CA00AD3189 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCDF153D17BB09EF0029280A = {
+			isa = PBXGroup;
+			children = (
+				DCDF154B17BB09EF0029280A /* SCFramework */,
+				DC3998FA17C497CA00AD3189 /* SCFrameworkSample */,
+				DCDF154817BB09EF0029280A /* Frameworks */,
+				DCDF154717BB09EF0029280A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCDF154717BB09EF0029280A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCDF154617BB09EF0029280A /* libSCFramework.a */,
+				DC3998F417C497CA00AD3189 /* SCFrameworkSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCDF154817BB09EF0029280A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCDF154917BB09EF0029280A /* Foundation.framework */,
+				DC3998F517C497CA00AD3189 /* UIKit.framework */,
+				DC3998F817C497CA00AD3189 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCDF154B17BB09EF0029280A /* SCFramework */ = {
+			isa = PBXGroup;
+			children = (
+				DCDF158117BB0BD70029280A /* DataDisplayerHandler */,
+				DCDF156A17BB0AF90029280A /* SCDataSet.h */,
+				DCDF157117BB0AF90029280A /* SCDataSets.h */,
+				DCDF156C17BB0AF90029280A /* SCDataSets.m */,
+				DCDF157917BB0AF90029280A /* SCViewController.h */,
+				DCDF157A17BB0AF90029280A /* SCViewController.m */,
+				DCDF154C17BB09EF0029280A /* Supporting Files */,
+				DCDF158217BB16750029280A /* SCDataSetPager.h */,
+				DCDF158317BB16750029280A /* SCDataSetPager.m */,
+				DCDF158C17BC24310029280A /* SCFramework.h */,
+			);
+			path = SCFramework;
+			sourceTree = "<group>";
+		};
+		DCDF154C17BB09EF0029280A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCDF154D17BB09EF0029280A /* SCFramework-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCDF158117BB0BD70029280A /* DataDisplayerHandler */ = {
+			isa = PBXGroup;
+			children = (
+				DCDF156B17BB0AF90029280A /* SCDataSourceHandle.h */,
+				DCDF156D17BB0AF90029280A /* SCDataSourceHandleImpl.h */,
+				DCDF156F17BB0AF90029280A /* SCDataSourceHandleImpl.m */,
+				DCDF157017BB0AF90029280A /* SCSection.h */,
+				DCDF157217BB0AF90029280A /* SCSection.m */,
+				DCDF157417BB0AF90029280A /* SCViewCreatorHandleInternal.h */,
+				DCDF157517BB0AF90029280A /* SCViewCreatorHandle.h */,
+				DCDF157317BB0AF90029280A /* SCViewCreatorHandle.m */,
+				DCDF157617BB0AF90029280A /* SCListDataDisplayerHandler.h */,
+				DCDF157717BB0AF90029280A /* SCListDataDisplayerHandler.m */,
+				DCDF157817BB0AF90029280A /* SCDataModelDisplayer.h */,
+				DCDF158E17BC26E70029280A /* SCSectionInternal.h */,
+				DCDF158F17BC2FF00029280A /* SCTableViewHandler.h */,
+				DCDF159017BC2FF00029280A /* SCTableViewHandler.m */,
+				DC3998EF17C495A600AD3189 /* SCListDataDisplayerHandlerInternal.h */,
+			);
+			name = DataDisplayerHandler;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC3998F317C497CA00AD3189 /* SCFrameworkSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC39991217C497CA00AD3189 /* Build configuration list for PBXNativeTarget "SCFrameworkSample" */;
+			buildPhases = (
+				DC3998F017C497CA00AD3189 /* Sources */,
+				DC3998F117C497CA00AD3189 /* Frameworks */,
+				DC3998F217C497CA00AD3189 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCFrameworkSample;
+			productName = SCFrameworkSample;
+			productReference = DC3998F417C497CA00AD3189 /* SCFrameworkSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCDF154517BB09EF0029280A /* SCFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCDF155417BB09EF0029280A /* Build configuration list for PBXNativeTarget "SCFramework" */;
+			buildPhases = (
+				DCDF154217BB09EF0029280A /* Sources */,
+				DCDF154317BB09EF0029280A /* Frameworks */,
+				DCDF154417BB09EF0029280A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCFramework;
+			productName = SCFramework;
+			productReference = DCDF154617BB09EF0029280A /* libSCFramework.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCDF153E17BB09EF0029280A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = SCorsin;
+			};
+			buildConfigurationList = DCDF154117BB09EF0029280A /* Build configuration list for PBXProject "SCFramework" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DCDF153D17BB09EF0029280A;
+			productRefGroup = DCDF154717BB09EF0029280A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCDF154517BB09EF0029280A /* SCFramework */,
+				DC3998F317C497CA00AD3189 /* SCFrameworkSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC3998F217C497CA00AD3189 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC3998FF17C497CA00AD3189 /* InfoPlist.strings in Resources */,
+				DC39990717C497CA00AD3189 /* Default.png in Resources */,
+				DC39990917C497CA00AD3189 /* Default@2x.png in Resources */,
+				DC39990B17C497CA00AD3189 /* Default-568h@2x.png in Resources */,
+				DC39990E17C497CA00AD3189 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC3998F017C497CA00AD3189 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC39990117C497CA00AD3189 /* main.m in Sources */,
+				DC39990517C497CA00AD3189 /* AppDelegate.m in Sources */,
+				DC39991117C497CA00AD3189 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCDF154217BB09EF0029280A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCDF158517BC1C6A0029280A /* SCListDataDisplayerHandler.m in Sources */,
+				DCDF158917BC1C7C0029280A /* SCViewController.m in Sources */,
+				DCDF158A17BC1C850029280A /* SCDataSetPager.m in Sources */,
+				DCDF158B17BC1C910029280A /* SCViewCreatorHandle.m in Sources */,
+				DCDF158617BC1C6F0029280A /* SCDataSourceHandleImpl.m in Sources */,
+				DCDF158817BC1C760029280A /* SCDataSets.m in Sources */,
+				DCDF158717BC1C720029280A /* SCSection.m in Sources */,
+				DCDF159117BC2FF10029280A /* SCTableViewHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DC3998FD17C497CA00AD3189 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC3998FE17C497CA00AD3189 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DC39990C17C497CA00AD3189 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC39990D17C497CA00AD3189 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC39991317C497CA00AD3189 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCFrameworkSample/SCFrameworkSample-Prefix.pch";
+				INFOPLIST_FILE = "SCFrameworkSample/SCFrameworkSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DC39991417C497CA00AD3189 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCFrameworkSample/SCFrameworkSample-Prefix.pch";
+				INFOPLIST_FILE = "SCFrameworkSample/SCFrameworkSample-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DCDF155217BB09EF0029280A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DCDF155317BB09EF0029280A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCDF155517BB09EF0029280A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SCFramework.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCFramework/SCFramework-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DCDF155617BB09EF0029280A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SCFramework.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCFramework/SCFramework-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC39991217C497CA00AD3189 /* Build configuration list for PBXNativeTarget "SCFrameworkSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC39991317C497CA00AD3189 /* Debug */,
+				DC39991417C497CA00AD3189 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DCDF154117BB09EF0029280A /* Build configuration list for PBXProject "SCFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCDF155217BB09EF0029280A /* Debug */,
+				DCDF155317BB09EF0029280A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCDF155417BB09EF0029280A /* Build configuration list for PBXNativeTarget "SCFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCDF155517BB09EF0029280A /* Debug */,
+				DCDF155617BB09EF0029280A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCDF153E17BB09EF0029280A /* Project object */;
+}
