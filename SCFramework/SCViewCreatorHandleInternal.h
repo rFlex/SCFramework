@@ -11,7 +11,7 @@
 #import "SCListDataDisplayerHandler.h"
 
 @interface SCViewCreatorHandle () {
-    InstantiationPredicate _instanciationPredicate;
+    SCAMethod * _instanciationPredicate;
 }
 
 @property (weak, nonatomic) SCListDataDisplayerHandler * dataDisplayerHandler;

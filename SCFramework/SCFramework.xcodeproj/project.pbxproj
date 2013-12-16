@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC06519717C989BF00B82413 /* NSMutableArray+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC06519617C989BF00B82413 /* NSMutableArray+SCAdditions.m */; };
+		DC38E8521835426D00499D70 /* ViewController in Resources */ = {isa = PBXBuildFile; fileRef = DC38E8511835426D00499D70 /* ViewController */; };
+		DC38E855183543A700499D70 /* SCAMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = DC38E854183543A700499D70 /* SCAMethod.m */; };
 		DC3998F617C497CA00AD3189 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3998F517C497CA00AD3189 /* UIKit.framework */; };
 		DC3998F717C497CA00AD3189 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDF154917BB09EF0029280A /* Foundation.framework */; };
 		DC3998F917C497CA00AD3189 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3998F817C497CA00AD3189 /* CoreGraphics.framework */; };
@@ -19,6 +22,9 @@
 		DC39990E17C497CA00AD3189 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC39990C17C497CA00AD3189 /* MainStoryboard.storyboard */; };
 		DC39991117C497CA00AD3189 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39991017C497CA00AD3189 /* ViewController.m */; };
 		DC39991517C497DC00AD3189 /* libSCFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDF154617BB09EF0029280A /* libSCFramework.a */; };
+		DC60AA3617C837C50060092A /* HeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60AA3517C837C50060092A /* HeaderCell.m */; };
+		DC60AA3917C837D20060092A /* TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60AA3817C837D20060092A /* TitleCell.m */; };
+		DC60AA3C17C837DB0060092A /* FooterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60AA3B17C837DB0060092A /* FooterCell.m */; };
 		DCDF154A17BB09EF0029280A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDF154917BB09EF0029280A /* Foundation.framework */; };
 		DCDF158517BC1C6A0029280A /* SCListDataDisplayerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF157717BB0AF90029280A /* SCListDataDisplayerHandler.m */; };
 		DCDF158617BC1C6F0029280A /* SCDataSourceHandleImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF156F17BB0AF90029280A /* SCDataSourceHandleImpl.m */; };
@@ -43,6 +49,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DC06519517C989BF00B82413 /* NSMutableArray+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SCAdditions.h"; sourceTree = "<group>"; };
+		DC06519617C989BF00B82413 /* NSMutableArray+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SCAdditions.m"; sourceTree = "<group>"; };
+		DC38E8511835426D00499D70 /* ViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ViewController; sourceTree = "<group>"; };
+		DC38E853183543A700499D70 /* SCAMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAMethod.h; sourceTree = "<group>"; };
+		DC38E854183543A700499D70 /* SCAMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAMethod.m; sourceTree = "<group>"; };
 		DC3998EF17C495A600AD3189 /* SCListDataDisplayerHandlerInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCListDataDisplayerHandlerInternal.h; sourceTree = "<group>"; };
 		DC3998F417C497CA00AD3189 /* SCFrameworkSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFrameworkSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC3998F517C497CA00AD3189 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -59,6 +70,12 @@
 		DC39990D17C497CA00AD3189 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DC39990F17C497CA00AD3189 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DC39991017C497CA00AD3189 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DC60AA3417C837C50060092A /* HeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderCell.h; sourceTree = "<group>"; };
+		DC60AA3517C837C50060092A /* HeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderCell.m; sourceTree = "<group>"; };
+		DC60AA3717C837D20060092A /* TitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleCell.h; sourceTree = "<group>"; };
+		DC60AA3817C837D20060092A /* TitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleCell.m; sourceTree = "<group>"; };
+		DC60AA3A17C837DB0060092A /* FooterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterCell.h; sourceTree = "<group>"; };
+		DC60AA3B17C837DB0060092A /* FooterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooterCell.m; sourceTree = "<group>"; };
 		DCDF154617BB09EF0029280A /* libSCFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSCFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDF154917BB09EF0029280A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DCDF154D17BB09EF0029280A /* SCFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SCFramework-Prefix.pch"; sourceTree = "<group>"; };
@@ -117,7 +134,14 @@
 				DC39990C17C497CA00AD3189 /* MainStoryboard.storyboard */,
 				DC39990F17C497CA00AD3189 /* ViewController.h */,
 				DC39991017C497CA00AD3189 /* ViewController.m */,
+				DC38E8511835426D00499D70 /* ViewController */,
 				DC3998FB17C497CA00AD3189 /* Supporting Files */,
+				DC60AA3417C837C50060092A /* HeaderCell.h */,
+				DC60AA3517C837C50060092A /* HeaderCell.m */,
+				DC60AA3717C837D20060092A /* TitleCell.h */,
+				DC60AA3817C837D20060092A /* TitleCell.m */,
+				DC60AA3A17C837DB0060092A /* FooterCell.h */,
+				DC60AA3B17C837DB0060092A /* FooterCell.m */,
 			);
 			path = SCFrameworkSample;
 			sourceTree = "<group>";
@@ -178,6 +202,10 @@
 				DCDF158217BB16750029280A /* SCDataSetPager.h */,
 				DCDF158317BB16750029280A /* SCDataSetPager.m */,
 				DCDF158C17BC24310029280A /* SCFramework.h */,
+				DC06519517C989BF00B82413 /* NSMutableArray+SCAdditions.h */,
+				DC06519617C989BF00B82413 /* NSMutableArray+SCAdditions.m */,
+				DC38E853183543A700499D70 /* SCAMethod.h */,
+				DC38E854183543A700499D70 /* SCAMethod.m */,
 			);
 			path = SCFramework;
 			sourceTree = "<group>";
@@ -284,6 +312,7 @@
 				DC3998FF17C497CA00AD3189 /* InfoPlist.strings in Resources */,
 				DC39990717C497CA00AD3189 /* Default.png in Resources */,
 				DC39990917C497CA00AD3189 /* Default@2x.png in Resources */,
+				DC38E8521835426D00499D70 /* ViewController in Resources */,
 				DC39990B17C497CA00AD3189 /* Default-568h@2x.png in Resources */,
 				DC39990E17C497CA00AD3189 /* MainStoryboard.storyboard in Resources */,
 			);
@@ -299,6 +328,9 @@
 				DC39990117C497CA00AD3189 /* main.m in Sources */,
 				DC39990517C497CA00AD3189 /* AppDelegate.m in Sources */,
 				DC39991117C497CA00AD3189 /* ViewController.m in Sources */,
+				DC60AA3617C837C50060092A /* HeaderCell.m in Sources */,
+				DC60AA3917C837D20060092A /* TitleCell.m in Sources */,
+				DC60AA3C17C837DB0060092A /* FooterCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +346,8 @@
 				DCDF158817BC1C760029280A /* SCDataSets.m in Sources */,
 				DCDF158717BC1C720029280A /* SCSection.m in Sources */,
 				DCDF159117BC2FF10029280A /* SCTableViewHandler.m in Sources */,
+				DC38E855183543A700499D70 /* SCAMethod.m in Sources */,
+				DC06519717C989BF00B82413 /* NSMutableArray+SCAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +485,7 @@
 				DC39991417C497CA00AD3189 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCDF154117BB09EF0029280A /* Build configuration list for PBXProject "SCFramework" */ = {
 			isa = XCConfigurationList;

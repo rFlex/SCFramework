@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SCFramework.h"
+#import "HeaderCell.h"
 
-@interface ViewController : SCViewController
+@interface ViewController : SCViewController<HeaderCellDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

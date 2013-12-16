@@ -25,8 +25,8 @@
 - (void) removeViewCreator:(SCViewCreatorHandle*)viewCreator;
 
 @property (strong, nonatomic, readonly) NSArray * viewCreators;
-@property (assign, nonatomic) BOOL showDebug;
 @property (strong, nonatomic) id<SCDataSourceHandle> dataSource;
 @property (assign, nonatomic) SCViewCreatorHandle * loadingViewCreator;
+@property (assign, nonatomic) BOOL enabled;
 
 @end

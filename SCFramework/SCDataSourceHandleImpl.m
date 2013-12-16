@@ -61,6 +61,9 @@
 }
 
 - (void) feedWithSingleData:(id)data atPageIndex:(NSInteger)index {
+	if (data == nil) {
+		data = [NSNull null];
+	}
     [self feedWithDataSet:[SCDataSets dataSetFromObject:data atPageIndex:index withpageCount:self.dataSetPager.pageCount + 1]];
 }
 
@@ -77,7 +80,7 @@
 }
 
 - (BOOL) dataSetIsComplete {
-    return self.dataSetPager.pageIndex + 1 >= self.dataSetPager.pageCount;
+    return self.dataSetPager.pageIndex >= self.dataSetPager.pageCount;
 }
 
 - (id<SCDataSet>) dataSet {

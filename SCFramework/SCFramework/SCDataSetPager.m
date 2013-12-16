@@ -30,12 +30,22 @@
 @synthesize pages;
 @synthesize count;
 
+- (id) init {
+	self = [super init];
+	
+	if (self) {
+		self.pages = [[NSMutableArray alloc] init];
+	}
+	
+	return self;
+}
+
 - (void) dealloc {
     self.pages = nil;
 }
 
 - (void) insertDataSet:(id<SCDataSet>)dataSet {
-    while (dataSet.pageIndex <= self.pages.count) {
+    while (dataSet.pageIndex >= self.pages.count) {
         [self.pages addObject:[[NSMutableArray alloc] init]];
     }
 
@@ -82,7 +92,7 @@
 }
 
 - (NSInteger) pageIndex {
-    return self.pages.count - 1;
+    return self.pages.count;
 }
 
 @end

@@ -12,3 +12,4 @@
 #import "SCViewController.h"
 #import "SCDataSets.h"
 #import "SCDataSetPager.h"
+#import "NSMutableArray+SCAdditions.h"

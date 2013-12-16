@@ -29,7 +29,23 @@
     return [self initWithReuseIdentifier:nil viewCreator:nil cellCreatedCb:nil instantiationPredicate:nil];
 }
 
-- (id) initWithReuseIdentifier:(NSString *)aReuseIdentifier viewCreator:(ViewCreator)aViewCreator cellCreatedCb:(CellCreated)cellCreated instantiationPredicate:(InstantiationPredicate)instantiationPredicate {
+- (void) dealloc {
+	NSLog(@"Dealloc view creator handle");
+}
+
+- (id) initWithReuseIdentifier:(NSString *)theReuseIdentifier {
+	return [self initWithReuseIdentifier:theReuseIdentifier viewCreator:nil cellCreatedCb:nil instantiationPredicate:nil];
+}
+
+- (id) initWithReuseIdentifier:(NSString *)theReuseIdentifier viewCreator:(SCAMethod*)theViewCreator {
+	return [self initWithReuseIdentifier:theReuseIdentifier viewCreator:theViewCreator cellCreatedCb:nil instantiationPredicate:nil];
+}
+
+- (id) initWithReuseIdentifier:(NSString *)theReuseIdentifier viewCreator:(SCAMethod*)theViewCreator cellCreatedCb:(SCAMethod*)cellCreated {
+	return [self initWithReuseIdentifier:theReuseIdentifier viewCreator:theViewCreator cellCreatedCb:cellCreated instantiationPredicate:nil];
+}
+
+- (id) initWithReuseIdentifier:(NSString *)aReuseIdentifier viewCreator:(SCAMethod*)aViewCreator cellCreatedCb:(SCAMethod*)cellCreated instantiationPredicate:(SCAMethod*)instantiationPredicate {
     self = [super init];
     
     if (self) {
@@ -48,32 +64,36 @@
     // First, we try using the reuseIdentifier
     if (self.reuseIdentifier != nil) {
         dataModelDisplayer = [self.dataDisplayerHandler dequeueDataModelDisplayerForIdentifier:self.reuseIdentifier];
-        
     }
     
+	void * boxedIndex = Boxed(index);
+	
     // Secondly, we use the view creator
     if (dataModelDisplayer == nil && self.viewCreator != nil) {
-        dataModelDisplayer = self.viewCreator(index, self.sectionIndex, data);
+		dataModelDisplayer = [self.viewCreator invoke:boxedIndex, Boxed(self.sectionIndex), data, nil];
     }
     
     if (dataModelDisplayer != nil && self.onCellCreated != nil) {
-        self.onCellCreated(dataModelDisplayer, index, self.sectionIndex);
+		[self.onCellCreated invoke:Boxed(index), Boxed(self.sectionIndex), nil];
     }
     
     return dataModelDisplayer;
 }
 
-- (void) setInstantiationPredicate:(InstantiationPredicate)newInstantiationPredicate {
+- (BOOL) defaultInstanciationPredicate:(NSInteger)index data:(id)data {
+	NSLog(@"Default instanciation predicate?");
+	return YES;
+}
+
+- (void) setInstantiationPredicate:(SCAMethod*)newInstantiationPredicate {
     if (newInstantiationPredicate == nil) {
-        
-        newInstantiationPredicate = ^(NSInteger index, id data) {
-            return YES;
-        };
+        newInstantiationPredicate = [[SCAMethod alloc] initWithTarget:self selector:@selector(defaultInstanciationPredicate:data:)];
     }
+	
     _instanciationPredicate = newInstantiationPredicate;
 }
 
-- (InstantiationPredicate) instantiationPredicate {
+- (SCAMethod*) instantiationPredicate {
     return _instanciationPredicate;
 }
 

@@ -1,0 +1,89 @@
+//
+//  ViewController.m
+//  SCFrameworkSample
+//
+//  Created by Simon CORSIN on 8/20/13.
+//  Copyright (c) 2013 SCorsin. All rights reserved.
+//
+
+#import "ViewController.h"
+#import "TitleCell.h"
+#import "HeaderCell.h"
+#import "SCFramework.h"
+
+@interface ViewController () {
+}
+
+@property (strong, nonatomic) SCTableViewHandler * tableViewHandler;
+@property (strong, nonatomic) UITapGestureRecognizer * tapGesture;
+@property (strong, nonatomic) SCTableViewSection * titleSection;
+
+@end
+
+@implementation ViewController
+
+@synthesize tableViewHandler;
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.tableViewHandler = [[SCTableViewHandler alloc] init];
+
+	__unsafe_unretained id mySelf = self;
+	SCTableViewSection * headerSection = [self.tableViewHandler addSection];
+	[headerSection addViewCreator:[[SCViewCreatorHandle alloc] initWithReuseIdentifier:@"HeaderCell" viewCreator:nil cellCreatedCb:^(HeaderCell* headerCell, NSInteger index, NSInteger sectionIndex) {
+		NSLog(@"Will set delegate?");
+//		headerCell.delegate = mySelf;
+	}]];
+	[headerSection.dataSource feedWithSingleData:nil];
+	
+	self.titleSection = [self.tableViewHandler addSection];
+	[self.titleSection addViewCreator:[[SCViewCreatorHandle alloc] initWithReuseIdentifier:@"TitleCell" viewCreator:nil cellCreatedCb:^(TitleCell * titleCell, NSInteger index, NSInteger sectionIndex) {
+		
+		[titleCell.onRemovedTapped addListenerBlock:^(SCEventParams *params) {
+			NSLog(@"Removed tapped");
+		}];
+	}]];
+	
+	SCTableViewSection * footerSection = [self.tableViewHandler addSection];
+	[footerSection addViewCreator:[[SCViewCreatorHandle alloc] initWithReuseIdentifier:@"FooterCell"]];
+	[footerSection.dataSource feedWithSingleData:nil];
+    
+    self.tableViewHandler.tableView = self.tableView;
+	
+	self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureChanged:)];
+	self.tapGesture.enabled = NO;
+	
+	[self.view addGestureRecognizer:self.tapGesture];
+}
+
+- (void) tapGestureChanged:(UITapGestureRecognizer*)tapGesture {
+	[self.view endEditing:YES];
+}
+
+- (void) removeCell {
+	
+}
+
+- (void) headerCell:(HeaderCell *)headerCell didRequestedAdd:(NSString *)entry {
+	
+}
+
+- (void) headerCellDidStartedEditing:(HeaderCell *)headerCell {
+	
+}
+
+- (void) addEntry:(NSString*)entry {
+	[self.titleSection.dataSource feedWithSingleData:entry];
+}
+
+- (void) removeTapped:(EventParams(TitleCell*))params {
+	TitleCell * cell = [params paramAtIndex:0];
+	
+	SCTableViewSection * titleSection = [self.tableViewHandler.sections objectAtIndex:1];
+	
+//	titleSection.dataSource.d
+}
+
+@end

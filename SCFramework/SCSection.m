@@ -23,7 +23,6 @@
 @implementation SCSection
 
 @synthesize dataSource;
-@synthesize showDebug;
 @synthesize sectionIndex;
 @synthesize mutableViewCreators;
 @synthesize dataDisplayerHandler;
@@ -32,6 +31,7 @@
     self = [super init];
     
     if (self) {
+		self.enabled = YES;
         self.mutableViewCreators = [[NSMutableArray alloc] init];
         self.dataSource = [[SCDataSourceHandleImpl alloc] init];
     }
@@ -61,7 +61,7 @@
 }
 
 - (SCViewCreatorHandle*) getViewCreatorAtIndex:(NSInteger)index forData:(id)data {
-    if (self.showDebug) {
+    if (self.dataDisplayerHandler.showDebug) {
         NSLog(@"Getting view creator at index %d for data %@", index, data);
     }
     
@@ -70,17 +70,17 @@
     }
     
     for (SCViewCreatorHandle * viewCreatorHandle in self.viewCreators) {
-        if (viewCreatorHandle.instantiationPredicate(index, data)) {
-            if (self.showDebug) {
+        if ([viewCreatorHandle.instantiationPredicate invoke:Boxed(index), data, nil]) {
+            if (self.dataDisplayerHandler.showDebug) {
                 NSLog(@"Returned %@ ", viewCreatorHandle.reuseIdentifier);
             }
             return viewCreatorHandle;
-        } else if (self.showDebug) {
+        } else if (self.dataDisplayerHandler.showDebug) {
             NSLog(@"%@ doesn't match", viewCreatorHandle.reuseIdentifier);
         }
     }
     
-    if (self.showDebug) {
+    if (self.dataDisplayerHandler.showDebug) {
         NSLog(@"NIL returned");
     }
     

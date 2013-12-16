@@ -8,11 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SCDataModelDisplayer.h"
-
-// Typedef
-typedef id<SCDataModelDisplayer> (^ViewCreator)(NSInteger index, NSInteger sectionIndex, id data);
-typedef void (^CellCreated)(id<SCDataModelDisplayer> dataModelDisplayer, NSInteger index, NSInteger sectionIndex);
-typedef BOOL (^InstantiationPredicate)(NSInteger index, id data);
+#import "SCAMethod.h"
 
 // Class definition
 
@@ -20,15 +16,19 @@ typedef BOOL (^InstantiationPredicate)(NSInteger index, id data);
     
 }
 
-- (id) initWithReuseIdentifier:(NSString*)reuseIdentifier viewCreator:(ViewCreator)viewCreator
-                 cellCreatedCb:(CellCreated)cellCreated
-        instantiationPredicate:(InstantiationPredicate)instantiationPredicate;
+- (id) initWithReuseIdentifier:(NSString*)reuseIdentifier;
+- (id) initWithReuseIdentifier:(NSString*)reuseIdentifier viewCreator:(AMethod(NSInteger data, NSInteger sectionIndex, id data))viewCreator;
+- (id) initWithReuseIdentifier:(NSString*)reuseIdentifier viewCreator:(AMethod(NSInteger data, NSInteger sectionIndex, id data))viewCreator
+                 cellCreatedCb:(AMethod())cellCreated;
+- (id) initWithReuseIdentifier:(NSString*)reuseIdentifier viewCreator:(AMethod(NSInteger data, NSInteger sectionIndex, id data))viewCreator
+                 cellCreatedCb:(AMethod())cellCreated
+        instantiationPredicate:(AMethod(NSInteger index, id data))instantiationPredicate;
 
 - (id<SCDataModelDisplayer>) createDataModelDisplayer:(NSInteger)index data:(id)data;
 
 @property (copy, nonatomic) NSString * reuseIdentifier;
-@property (assign, nonatomic) ViewCreator viewCreator;
-@property (assign, nonatomic) CellCreated onCellCreated;
-@property (assign, nonatomic) InstantiationPredicate instantiationPredicate;
+@property (assign, nonatomic) AMethod(NSInteger data, NSInteger sectionIndex, id data) viewCreator;
+@property (assign, nonatomic) AMethod() onCellCreated;
+@property (assign, nonatomic) AMethod(NSInteger index, id data) instantiationPredicate;
 
 @end

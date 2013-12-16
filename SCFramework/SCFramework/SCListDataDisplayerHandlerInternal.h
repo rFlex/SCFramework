@@ -15,4 +15,6 @@
 
 - (SCSection*) createSection;
 
+@property (strong, nonatomic) NSMutableArray * sections;
+
 @end

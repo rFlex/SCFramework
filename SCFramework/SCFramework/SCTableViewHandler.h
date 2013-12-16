@@ -23,6 +23,8 @@
 }
 
 - (SCTableViewSection*) addSection;
+- (SCTableViewSection*) getSectionForIndex:(NSUInteger)sectionIndex;
+- (SCTableViewSection*) getSectionForTableViewSectionIndex:(NSInteger)tableViewSectionIndex;
 
 @property (strong, nonatomic) UITableView * tableView;
 

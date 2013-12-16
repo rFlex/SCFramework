@@ -25,6 +25,7 @@
 
 @optional
 
+- (void) removeDataSet:(id<SCDataSet>)dataSet;
 - (void) feedWithSingleData:(id)data;
 - (void) feedWithSingleData:(id)data atPageIndex:(NSInteger)index;
 - (void) feedWithArray:(NSArray*)array;

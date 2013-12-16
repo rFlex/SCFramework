@@ -14,11 +14,13 @@
     
 }
 
-- (id) addSection;
+- (SCSection*) addSection;
+- (SCSection*) getSectionForIndex:(NSUInteger)sectionIndex;
 
 - (id<SCDataModelDisplayer>) dequeueDataModelDisplayerForIdentifier:(NSString*)identifier;
-- (id<SCDataModelDisplayer>) createDataModelDisplayerAtIndex:(NSInteger)index forSection:(NSInteger)sectionIndex;
+- (id<SCDataModelDisplayer>) createDataModelDisplayerAtIndex:(NSInteger)index forSection:(SCSection*)section;
 
 @property (strong, nonatomic, readonly) NSMutableArray * sections;
+@property (assign, nonatomic) BOOL showDebug;
 
 @end
